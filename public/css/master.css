@@ -1,0 +1,446 @@
+body {
+	padding-top: 70px;
+	background-color: #ECF0FB;
+	color: #353432;
+	min-height: 100%;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+/*@font-face {
+	font-family: 'Canter';
+	src: url('/font/canter/Canter Bold.otf');
+}*/
+/*h1, h2, h3, h4 {
+}
+h1 {
+	font-size: 4.5em;
+}
+h2 {
+	font-size: 3em;
+}*/
+.index-header {
+	background-image: url('/img/bottles.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 105px;
+	color: #EDEDED;
+	object-fit: cover;
+	object-position: 50% 50%;
+	border-radius: 2px;
+	position: relative;
+}
+.index-header>h1 {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(6, 6, 6, .4);
+}
+.index-header>h1>small{ color: #EDEDED; }
+a {
+	color: #08B7BD;
+} 
+a:hover { 
+	color: #1798A3; 
+}
+hr {
+	background-color: #818181;
+	border-top: solid 1px #B5B5B5;
+}
+.navigation#top {
+	position: relative;
+	top: 0;
+	min-height: 6vh;
+	background-color: #353432;
+	color: #EDEDED;
+}
+.navbar {
+	background-color: #353432;
+	border-color: #353432;
+}
+.navbar-form {
+	border-top: 0;
+	border-bottom: 0;
+}
+.navigation#bottom {
+	position: fixed;
+	bottom: 0px;
+	min-height: 10vh;
+	color: #000;
+	font-size: .9em;
+}
+.nav-nearby.nav-search.nav-home.nav-activity.nav-more {
+	height: 100%;
+	text-align: center;
+}
+.carousel-control {
+	background-image: none !important;
+}
+
+#nav-text {
+	font-size: 1em;
+}
+.feature-box {
+	height: 15vh;
+	width: 90%;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5px;
+}
+.carousel-image-container, .carousel-caption {
+	height: 20vh;
+}
+#home-king {
+	height: 8vh;
+	position: relative;
+	margin: 0 auto;
+}
+.foreached-button {
+	margin: 0 auto;
+	vertical-align: center;
+	display: table-cell;
+}
+.list-card {
+	transform: translate3d(0px, 0px, 0px);
+	background-color: #F8FAFA;
+	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 3px 0px;
+	display: block;
+	transition: box-shadow 0.2s cubic-bezier(0, 0.2, 0.4, 1);
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.list-card:hover,
+.list-card:active {
+	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 3px 5px 2px;
+}
+.list-card-image {padding-left:0px !important;}
+.h3-list-title {
+	text-transform: uppercase;
+	letter-spacing: .5px;
+}
+/* events/show */
+.event-month {
+	padding: 0;
+	margin: 0 auto;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+}
+.event-date {
+	padding: 0;
+	margin: 0 auto;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.25em;
+	letter-spacing: 1px;
+}
+.event-title {
+	max-height: 125px;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 30px;
+	letter-spacing: 0.5px;
+	padding-top: 50px;
+}
+.event-by {
+	padding-top: 10vh;
+}
+.primary-label {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+.event-description {
+	font-size: 15px;
+	line-height: 22px;
+}
+.address-phone {
+	font-size: 12px !important;
+	font-weight: 400 !important;
+}
+.event-info>p {
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 500;
+	margin: 0;
+}
+
+/* media queries! */
+@media only screen and (max-width: 770px) {
+	#header-logo,
+	.more-menu,
+	#desktop-nav,
+	.sidenav-content { display: none; }
+	.thumbnail { height: 60px; width: 60px; }
+	.top-bars>h2 { font-size: 25px }
+	#bottom>.btn-default {
+	background-color: #353432;
+	color: #EDEDED;
+	border-color: #414141;
+	}
+	.nav-home {
+		padding-left: 8px;
+	}
+	.mobile-login {
+		padding-top: 8px;
+	}
+	.gameplan-header {
+		height: 200px; 
+	}
+	.bottom-more-nav {
+		height: 0;
+		width: 100%; /* 0 width - change this with JavaScript */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Stay on top */
+		bottom: 0;
+		background-color: rgba(15, 15, 15, .9); /* Black*/
+		overflow-x: hidden; /* Disable horizontal scroll */
+		padding-top: 60px; /* Place content 60px from the top */
+		/*transition: 0.5s;  0.5 second transition effect to slide in the sidenav */
+		padding: 0;
+	}
+	.bottom-more-nav li {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 18px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+		cursor: pointer;
+	}
+	.bottomnav-content{ padding-top: 5px }
+	.bottom-more-nav li:hover, 
+	.bottom-more-nav li:active, 
+	.offcanvas li:focus,
+	.bottom-more-nav li.active{ color: #f1f1f1; box-shadow: 0px 3px 5px #000; }
+	#bottom-more-bars,
+	#bottom-more-events,
+	#bottom-more-specials,
+	#bottom-more-gameplans { display:none; }
+	#bottom-more-bars>li,
+	#bottom-more-events>li,
+	#bottom-more-specials>li,
+	#bottom-more-gameplans>li,
+	#bottom-more-about { font-size: 13px; box-shadow: 0 0 0; float: left; }
+	#close-more {
+		position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+    color: #818181;
+    cursor: pointer;
+	}
+	#close-more:hover {color: #f1f1f1;}
+	.index-header {
+		background-position: 50% 50%;
+		height: 85px;
+	}
+	.event-title {
+		font-size: 20px;
+	}
+	.event-title-info {
+		padding-left: 0;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.carousel-image-container, .carousel-caption {
+		height: 30vh;
+	}
+	.gameplan-list-carousel>img {
+		object-fit: cover;
+		object-position: 50% 50%;
+		max-height: 50px !important;
+	}
+	.mobile-login { display:none; }
+	#home-king {
+		height: 15vh;
+	}
+	.navigation#bottom {
+		display: none;
+	}
+	hr {
+		background-color: #818181;
+		border-top: solid 1px #B5B5B5;
+	}
+	.navigation#top {
+		height: 50px;
+	}
+	#desktop-nav .more-options {
+		margin-top: 1vh;
+	}
+	.more-options>.more-button { float: right; margin-top: -2vh; }
+	.more-button i { margin: 2.5vh; color: #08B7BD;}
+	.more-button:hover {
+		background-color: #262626;
+		background-clip: padding-box;
+		cursor: pointer;
+	}
+	#header-logo {
+		padding: .5vh;
+		margin-left: -5px;
+	}
+	.gameplan-header {
+		height: 500px; 
+	}
+	.bottomnav-content { display: none; }
+	.side-nav {
+		height: 100vh;
+		margin-top: 55px;
+		width: 0; /* 0 width - change this with JavaScript */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Stay on top */
+		top: 0;
+		right: 0;
+		background-color: rgba(15, 15, 15, .9); /* Black*/
+		overflow-x: hidden; /* Disable horizontal scroll */
+		padding-top: 60px; /* Place content 60px from the top */
+		/*transition: 0.5s;  0.5 second transition effect to slide in the sidenav */
+		padding: 0;
+	}
+	.side-nav li {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 20px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+		cursor: pointer;
+	}
+	.sidenav-content{ padding-top: 20px }
+	.side-nav li:hover, 
+	.side-nav li:active, 
+	.offcanvas li:focus,
+	.side-nav li.active{ color: #f1f1f1; box-shadow: 0px 3px 5px #000; }
+	#more-bars,
+	#more-events,
+	#more-specials,
+	#more-gameplans { display:none; }
+	#more-bars>li,
+	#more-events>li,
+	#more-specials>li,
+	#more-gameplans>li { font-size: 15px; box-shadow: 0 0 0; }
+	#sidenav-about {
+		position: fixed;
+		bottom: 5px;
+		padding-right: 138px;
+	}
+
+	.filters {display:none;}
+}
+.carousel>img, .carousel-caption {
+	margin: 0 auto;
+	object-position: 50% 50%;
+	object-fit: cover;
+}
+
+.carousel-caption {
+	top: 0;
+	bottom: auto;
+}
+
+.events-slider {
+	cursor: pointer;
+}
+
+.thisBar {
+	cursor: pointer;
+}
+
+.bottom-nav-spacer {
+	min-height: 20vh;
+}
+
+#dropzone {
+	display: none;
+}
+.search-form {
+	display: none;
+}
+.features-select {
+	display: none;
+}
+.beer-rating {
+	padding: 0;
+	font-size: 1.25em;
+	font-family: FontAwesome;
+	display: inline-block;
+	content: "\f005";
+	color: #FFC100;
+}
+.user-page-review-info {
+	font-size: small;
+}		
+
+/* overriding bs colors */
+.btn {
+	border-radius: 2px;
+}
+.btn-default {
+	background-color: #D4D8E1;
+}
+.btn-default:hover {
+	background-color: #B0B3BB;
+}
+.navigation#bottom.btn-default {
+	background-color: ;
+}
+.btn-primary {
+	background-color: #24B5C7;
+	border-color: #22ACBD;
+}
+.btn-primary:hover {
+	background-color: #74E4F2;
+	border-color: #58ADB8;
+}
+.btn-warning {
+	background-color: #FF7B2C;
+	border-color: #E36D27;
+}
+.btn-warning:hover {
+	background-color: #FF9E53;
+	border-color: #FF7B2C;
+}
+.nav-tabs>li>a:hover {
+	background-color: #D4D8E1;
+}
+.nav-tabs>li>a:active {
+	background-color: #black;
+}
+
+/****** Style Star Rating Widget *****/
+.rating { 
+	border: none;
+	float: left;
+	padding-bottom: 10px;
+}
+
+.rating > input { 
+	display: none; 
+} 
+.rating > label:before { 
+	margin: 5px;
+	font-size: 1.25em;
+	font-family: FontAwesome;
+	font-style: normal;
+	display: inline-block;
+	content: "\f005";
+}
+.rating > .half:before { 
+	content: "\f089";
+	position: absolute;
+}
+
+.rating > label { 
+	color: #ddd; 
+	float: right; 
+}
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFC100;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFD44C;  }
