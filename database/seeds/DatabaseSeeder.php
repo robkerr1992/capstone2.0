@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ReviewsTableSeeder::class);
         $this->call(EventsTableSeeder::class);
         $this->call(SpecialsTableSeeder::class);
+        $this->call(GameplansTableSeeder::class);
+        $this->call(GameplanBarsTableSeeder::class);
+        $this->call(HoppersTableSeeder::class);
 //        $this->call(VotesTableSeeder::class);
 //        Model::reguard();
     }
