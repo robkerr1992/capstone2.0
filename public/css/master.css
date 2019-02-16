@@ -165,6 +165,7 @@ hr {
 }
 
 /* media queries! */
+/*small screen*/
 @media only screen and (max-width: 770px) {
 	#header-logo,
 	.more-menu,
@@ -241,8 +242,17 @@ hr {
 	.event-title-info {
 		padding-left: 0;
 	}
+	.bar-show{
+		height: 150px;
+		width: 200px;
+	}
 }
+/*big screen*/
 @media only screen and (min-width: 768px) {
+	.bar-show{
+		height: 300px;
+		width: 600px;
+	}
 	.carousel-image-container, .carousel-caption {
 		height: 30vh;
 	}
@@ -434,6 +444,12 @@ hr {
 	color: #ddd; 
 	float: right; 
 }
+
+.carousel-inner>.item>img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /***** CSS Magic to Highlight Stars on Hover *****/
 
 .rating > input:checked ~ label, /* show gold star when clicked */

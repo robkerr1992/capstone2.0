@@ -40,7 +40,7 @@
 
 					<div data-value="{{ $picture->pic_url }}" class="item @if($index == 0) {{ 'active' }} @endif">
 						<a href="{{ $picture->pic_url }}" rel="gallery"  class="pirobox_gall">
-							<img class="cover" src="{{ $picture->pic_url }}" alt="...">
+							<img class="cover bar-show" src="{{ $picture->pic_url }}" alt="...">
 						</a>
 						<div class="carousel-caption">
 							<!-- maybe add captions to pictures table? -->
@@ -94,7 +94,7 @@
 											</h5>
 											<small>user score</small>
 											<p>&nbsp;{{ $review->user->totalUserVotes() }}</p>
-											<small>review score</small> 
+											<small>review score</small>
 											<br>
 											<div id="{{ $review->id }}">&nbsp;{{ $review->totalVotes() }}</div>
 										</div>
@@ -108,7 +108,7 @@
 											<hr>
 											<strong>Was this review helpful?</strong>
 											<div class="">
-												<button role="button" data-value="{{ $review->id }}" class="btn btn-primary upvote">Yes</button> 
+												<button role="button" data-value="{{ $review->id }}" class="btn btn-primary upvote">Yes</button>
 												<button role="button" data-value="{{ $review->id }}" class="btn btn-danger downvote">No</button>
 											</div>
 											@endif
@@ -165,7 +165,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
 				</div>
 				@stop
 				@section('scripts')

@@ -20,7 +20,7 @@ class CreateEventsTable extends Migration
 			$table->string('title');
 			$table->string('date');
 			$table->string('content');
-			$table->string('event_pic')->default('https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg')->nullable();
+			$table->string('event_pic')->default('/img/event.jpg')->nullable();
 			$table->integer('created_by')->unsigned();
 			$table->foreign('created_by')->references('id')->on('users');
 			$table->timestamps();
