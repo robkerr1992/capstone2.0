@@ -58,13 +58,13 @@
 				<h4>Hoppers:</h4>
 				@foreach($gameplan->hoppers as $hopper)
 				<h5>{{ $hopper->user->first_name . ' ' . $hopper->user->formatLastName() }}</h5>
+				@endforeach
 			</div>
 		</div>
 	</div>
 	@endforeach
-	@endforeach
 </div>
-{!! $gameplans->render() !!}
+{{--{!! $gameplans->render() !!}--}}
 @stop
 @section('scripts')
 <script>

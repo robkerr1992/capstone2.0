@@ -42,7 +42,7 @@ foreach ($barsArray as $key => $data) {
     ]);
     $barpicture = App\Picture::create([
         'bar_id' => $bar->id,
-        'pic_url' => $image
+        'pic_url' => $data[4]
 
     ]);
     $barpicture = App\Feature::create([
@@ -61,7 +61,7 @@ foreach ($barsArray as $key => $data) {
 }
 $factory->define(App\Bar::class, function (Faker $faker) {
     return [
-        'name' => $faker->colorName . $faker->bankAccountNumber,
+        'name' => $faker->colorName,
         'address' => $faker->streetAddress,
         'phone' => 2105556666,
         'website' => $faker->domainName,

@@ -11,6 +11,6 @@ class GameplansTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Gameplan::class, 50)->create();
+        factory(App\Gameplan::class, 35)->create();
     }
 }
