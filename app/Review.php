@@ -64,7 +64,7 @@ class Review extends Model
             $starRating = '';
             break;
             case 1:
-            $starRating = '<i class="fa fa-star" aria-hidden="true"></i>';
+            $starRating = '&#xf005;';
             break;
             case 2:
             $starRating = '&#xf005;&#xf005;';

@@ -15,7 +15,7 @@
 							<p>{{ $index+1 }}</p>
 						</div>
 						<img class="cover"
-						src="{{ $gpbar->bar->pictures->first()->pic_url or '' }}"
+						src="{{ $gpbar->bar->pictures->first() ? $gpbar->bar->pictures->first()->pic_url : '' }}"
 						alt="{{ $gpbar->bar->name }}">
 					</div>
 					@endforeach
@@ -66,7 +66,7 @@
 			@endif
 			@if((Auth::user()) && (Auth::user()->id == $gameplan->author_id))
 			<div>
-				<a class="btn btn-warning btn-block" href="{{action('GameplansController@edit', $gameplan->id) }}">Edit Event</a>
+				<a class="btn btn-warning btn-block" href="{{action('GameplansController@edit', $gameplan->id) }}">Edit Gameplan</a>
 				<form method="POST" action="{{action('GameplansController@destroy', $gameplan->id) }}">
 					<input type="submit" class="btn btn-danger btn-block" value="Delete">
 					{{ method_field('DELETE') }}

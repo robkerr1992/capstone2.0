@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
 //        DB::table('bars')->delete();
 //        DB::table('users')->delete();
         $this->call(UsersTableSeeder::class);
-//        $this->call(BarsTableSeeder::class);
-//        $this->call(ReviewsTableSeeder::class);
+        $this->call(BarsTableSeeder::class);
+        $this->call(ReviewsTableSeeder::class);
 //        $this->call(EventsTableSeeder::class);
 //        $this->call(BarPicturesTableSeeder::class);
 //        $this->call(BarFeaturesTableSeeder::class);

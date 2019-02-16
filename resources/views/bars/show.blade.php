@@ -5,7 +5,7 @@
 	<div class="row" id="bar-info">
 		<div class="col-xs-6" id="details">
 			<h3>{{ $bar->name }}</h3>
-			<p class="beer-rating">{{ $bar->averageBarRating() }}</p>
+			<p class="beer-rating">{!! $bar->averageBarRating() !!}</p>
 			<br>
 			<a href="http://maps.apple.com/?q={{ $bar->address }}">{{ $bar->address }}</a>
 			<br>

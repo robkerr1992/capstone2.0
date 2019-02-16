@@ -28,7 +28,7 @@
 			@foreach ($user->reviews as $review)
 			<div class="row">
 				<div class="col-xs-2">
-					<img src="{{ $review->bar->pictures->first()->pic_url or '' }}" class="thumbnail responsive" height="65" width="65">
+					<img src="{{ $review->bar->pictures->first() ? $review->bar->pictures->first()->pic_url : '' }}" class="thumbnail responsive" height="65" width="65">
 				</div>
 				<div class="col-xs-10">
 					<a href="/bars/{{ $review->bar_id }}"><strong>{{ $review->bar->name }}</strong></a>
