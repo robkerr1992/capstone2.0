@@ -14,7 +14,7 @@
 							<h2>{{ $gpbar->bar->name }}</h2>
 							<p>{{ $index+1 }}</p>
 						</div>
-						<img class="cover"
+						<img class="cover gameplan-show"
 						src="{{ $gpbar->bar->pictures->first() ? $gpbar->bar->pictures->first()->pic_url : '' }}"
 						alt="{{ $gpbar->bar->name }}">
 					</div>
@@ -32,11 +32,9 @@
 			</div>
 		</div>
 		<div class="col-xs-4">
-			<p class="event-month">{{ $gameplan->date->format('M') }}</p>
-			<p class="event-date">{{ $gameplan->date->format('d') }}</p>
 			<p class="event-title">{{ $gameplan->title }}</p>
 			<div class="event-by">
-				<small>submitted by</small>
+				<small>Gameplan by</small>
 				<p class="submitted-by"><a href="/users/{{ $gameplan->author->id }}">{{ $gameplan->author->first_name }} {{ $gameplan->author->formatLastName() }}.</a></p>
 			</div>
 		</div>
