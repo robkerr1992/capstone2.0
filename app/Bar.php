@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 
 class Bar extends Model
 {
@@ -12,7 +11,6 @@ class Bar extends Model
     public static $rules =
     [
     'name' => 'required|max:50',
-	// 'type' => 'required|max:255',
     'address' => 'required|max:255',
     'email' => 'email|max:244|unique:users',
     'phone' => 'min:7|max:10',

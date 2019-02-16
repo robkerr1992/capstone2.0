@@ -11,7 +11,7 @@ class BarFeaturesTableSeeder extends Seeder
      */
     public function run()
     {
-//        factory(App\Feature::class, 100)->create();
+        factory(App\Feature::class, 100)->create();
         $bars = App\Bar::all()->pluck('id');
         foreach ($bars as $barid) {
             $bar = new \App\Feature();

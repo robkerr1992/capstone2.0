@@ -46,7 +46,7 @@
 				<div class="sidenav-content">
 					<li id="sidenav-bars">Bars</li>
 					<ul id="more-bars">
-						<li><a href="" class="nearby">Nearby</a></li>
+						{{--<li><a href="" class="nearby">Nearby</a></li>--}}
 						<li><a href="/discover">Discover</a></li>
 						<li><a href="/bars">Top Rated</a></li>
 						@if(Auth::check())
@@ -63,7 +63,7 @@
 					<li id="sidenav-events">Events</li>
 					<li id="sidenav-specials">Specials</li>
 					<li id="sidenav-recent">Recent Activity</li>
-					<li id="sidenav-about">About Us</li>
+					{{--<li id="sidenav-about">About Us</li>--}}
 				</ul>
 			</div>
 		</div>
@@ -78,10 +78,10 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="btn-group btn-group-justified navigation" id="bottom" role="group" aria-label="navigation">
-			<a href=""  class="nearby btn btn-default nav-nearby" role="group" aria-label="nearby">
+			<a href="/gameplans"  class="nearby btn btn-default nav-nearby" role="group" aria-label="nearby">
 				<i class="fa fa-location-arrow fa-2x" aria-hidden="true"></i>
 				<br>
-				<span id="nav-text">Nearby</span>
+				<span id="nav-text">Gameplans</span>
 			</a>
 			<a href="" class="btn btn-default nav-search search" role="group" aria-label="search">
 				<i class="fa fa-search fa-2x" aria-hidden="true"></i>
@@ -125,7 +125,7 @@
 				@endif
 				<li id="bottomnav-events">Events</li>
 				<li id="bottomnav-specials">Specials</li>
-				<li id="bottomnav-about">About Us</li>
+				{{--<li id="bottomnav-about">About Us</li>--}}
 			</ul>
 		</div>
 	</div>

@@ -5,16 +5,10 @@ namespace App\Http\Controllers;
 use App\Gameplan;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\Bar;
 use App\Event;
-use App\Feature;
-use App\Picture;
 use App\Review;
 use App\Special;
-use App\User;
-use App\Vote;
 
 class HomeController extends Controller
 {

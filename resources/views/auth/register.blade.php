@@ -3,7 +3,7 @@
 @section('content')
 <div class="col-xs-8 col-xs-offset-2">
 	<h4 class="modal-title">Create a new account</h4>
-	<form method="POST" action="{{ action('Auth\AuthController@postRegister') }}">
+	<form method="POST" action="{{ action('Auth\RegisterController@register') }}">
 		{{ csrf_field() }}
 		<div class="form-group">
 			<input
@@ -30,7 +30,7 @@
 			name="password"
 			id="password"
 			placeholder="Password">
-			<small>Password has to be between 6-60 characters</small>
+			{{--<small>Password has to be between 6-60 characters</small>--}}
 			@include('forms.error', ['field' => 'password'])		
 		</div>
 		<div class="form-group">
@@ -53,7 +53,7 @@
 		</div>
 		<!-- add remember me button -->
 		<div class="pull-left">
-			Already a member? <a href="/auth/login">Log in here</a>
+			Already a member? <a href="/login">Log in here</a>
 		</div>
 		<button type="submit" class="btn btn-primary pull-right">Sign up</button>
 	</form>

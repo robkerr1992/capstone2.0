@@ -55,10 +55,10 @@
 			</div>
 			<div class="col-xs-4 more-options navbar-right">
 				@if (Auth::check())
-				Welcome <a href="/users/{{ Auth::user()->id }}">{{ Auth::user()->first_name }}</a>! | <a href="/auth/logout">logout</a>
+				Welcome <a href="/users/{{ Auth::user()->id }}">{{ Auth::user()->first_name }}</a>! |  <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
 				@elseif (!Auth::check())
-				<a href="/auth/register/" class="btn btn-default">Register</a>
-				<a href="/auth/login/" class="btn btn-default">Login</a>
+				<a href="/register/" class="btn btn-default">Register</a>
+				<a href="/login/" class="btn btn-default">Login</a>
 				@endif
 				<div class="more-button" id="more-options"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
 			</div>
@@ -71,7 +71,7 @@
 				<li role="presentation" class="active"><a href="#search" aria-controls="reviews" role="tab" data-toggle="tab">Search</a></li>
 				<li role="presentation" class=""><a href="#filter" aria-controls="reviews" role="tab" data-toggle="tab" id="filter-tab">Filters</a></li>
 			</ul>
-			<div class="form" class="col-xs-11">
+			<div class="form col-xs-11">
 				<form method="get" action="/search" class="search-form navbar-form form-inline">
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane fade in active form-group hidden" id="filter">
@@ -117,11 +117,14 @@
 			</div>
 			<div class="col-xs-6 mobile-login navbar-right pull-right">
 				@if (Auth::check())
-				Welcome <a href="/users/{{ Auth::user()->id }}">{{ Auth::user()->first_name }}</a>! | <a href="/auth/logout">logout</a>
+				Welcome <a href="/users/{{ Auth::user()->id }}">{{ Auth::user()->first_name }}</a>! | <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
 				@elseif (!Auth::check())
-				<a href="/auth/register/" class="btn btn-default">Register</a>
-				<a href="/auth/login/" class="btn btn-default">Login</a>
+				<a href="/register/" class="btn btn-default">Register</a>
+				<a href="/login/" class="btn btn-default">Login</a>
 				@endif
+				<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+					{{ csrf_field() }}
+				</form>
 			</div>
 		</div>
 	</div>

@@ -8,7 +8,7 @@ class Feature extends Model
 {
     protected $table = 'bar_features';
 
-    private $labels = [
+    protected $labels = [
     	'smoking' => 'Smoking allowed',
     	'food' => 'Kitchen',
     	'pet_friendly' => 'Pet friendly',
@@ -20,6 +20,10 @@ class Feature extends Model
     	'darts' => 'Darts',
         'games' => 'Games',
     ];
+
+    public function getTableColumns() {
+        return $this->getConnection()->getSchemaBuilder()->getColumnListing($this->getTable());
+    }
 
     public function bar()
     {

@@ -13,7 +13,7 @@ class BarsTableSeeder extends Seeder
      */
     public function run()
     {
-//        factory(App\Bar::class, 100)->create();
+        factory(App\Bar::class, 100)->create();
         $barsArray = [
             ['Cross-Eyed Seagull','19141 Stone Oak Pkwy # 206, San Antonio, TX 78258','2105453440','http://crosseyedseagull.clarksbars.com/', 'https://b.zmtcdn.com/data/reviews_photos/57a/07aae71082d890b9ac64ea10512e157a.jpg'],
             ['Chicago Bar','19141 Stone Oak Pkwy # 505, San Antonio, TX 78258','2104945558','','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
@@ -39,11 +39,6 @@ class BarsTableSeeder extends Seeder
             ['The Hangar','8203 Broadway St, San Antonio, TX 78209','2108242700','thehangarsa.com','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
             ['Rookie\'s Bar','6402 Callaghan Rd, San Antonio, TX 78229','2103770909','','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
             ['MAX\'s Wine Dive','Quarry Village, 340 E Basse Rd #101, San Antonio, TX 78209','2104449547','maxswinedive.com','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
-//            ['','','','','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
-//            ['','','','','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
-//            ['','','','','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
-//            ['','','','','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
-//            ['','','','','https://s-media-cache-ak0.pinimg.com/564x/29/59/75/295975b49585969c6f7ebd474c162a07.jpg'],
 
         ];
         foreach ($barsArray as $key => $data){

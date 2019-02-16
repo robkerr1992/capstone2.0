@@ -43,7 +43,7 @@
 	@foreach ($highestRated as $sortedBar)
 	<div data-value="{{ $sortedBar->id }}" class="row thisBar list-card">
 		<div class="col-xs-5 list-card-image">
-			<img class="pull-left" src="{{ $sortedBar->pictures->first()->pic_url or '' }}" style="height: 22vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
+			<img class="pull-left" src="{{ $sortedBar->pictures->first() ? $sortedBar->pictures->first()->pic_url : '' }}" style="height: 22vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
 		</div>
 		<div class="col-xs-7 top-bars">
 			<h2>{{ $sortedBar->name}}</h2>
