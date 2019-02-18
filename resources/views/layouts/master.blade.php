@@ -89,7 +89,7 @@
 				<span id="nav-text">Search</span>
 			</a>
 			<a href="/" class="btn btn-default nav-home" role="group" aria-label="home">
-				<img id="home-king" src="/img/210hopper-kangaroo.png">
+				<img id="home-king" src="{{asset('/img/210hopper-kangaroo.png')}}">
 			</a>
 			<a href="/recent" class="btn btn-default nav-activity" role="group" aria-label="activity">
 				<i class="fa fa-bolt fa-2x" aria-hidden="true"></i>

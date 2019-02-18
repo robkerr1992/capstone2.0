@@ -3,7 +3,7 @@
 		<!-- desktop view -->
 		<div class="row" id="desktop-nav">
 			<div class="col-xs-3">
-				<a href="/"><img id="header-logo" src="/img/210hopper-orange.png" alt="Hop on home!"></a>
+				<a href="/"><img id="header-logo" src="{{asset('/img/210hopper-orange.png')}}" alt="Hop on home!"></a>
 			</div>
 			<div class="col-xs-5">
 				<div class="row">
