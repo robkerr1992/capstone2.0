@@ -3,4 +3,6 @@ This is an updated version(Laravel 5.7) of my final project aka Capstone created
 
 Deployed live as a demo at: <a href="http://rksugarfree.com">http://rksugarfree.com</a>
 
+Test Credentials -> user: testuser@testemail.com password: password
+
 You can find the original repository here: <a href="https://github.com/FluffyManatee/210Hopping">https://github.com/FluffyManatee/210Hopping</a>
