@@ -7,7 +7,7 @@
 	@foreach ($upcomingEvents as $index => $event)
 	<div data-value="{{ $event->id }}" class="row list-card">
 		<div class="col-xs-5 list-card-image">
-			<img class="pull-left" src="{{$event->event_pic}}" style="height: 20vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
+			<img class="pull-left" src="{{asset($event->event_pic)}}" style="height: 20vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
 		</div>
 		<div class="col-xs-7">
 			<div class="event-info">
@@ -20,7 +20,6 @@
 		</div>
 		@endforeach
 	</div>
-	{{--{!! $events->render() !!}--}}
 	@stop
 	@section('scripts')
 	<script>

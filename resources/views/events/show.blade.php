@@ -5,8 +5,8 @@
 	<br>
 	<div class="row">
 		<div class="col-xs-8">
-			<a href="{{ $event->event_pic }}">
-				<img  class="thumbnail" src="{{$event->event_pic}}" style="height: 40vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
+			<a href="{{ asset($event->event_pic) }}">
+				<img  class="thumbnail" src="{{asset($event->event_pic)}}" style="height: 40vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
 			</a>
 		</div>
 		<div class="col-xs-4 event-title-info">

@@ -44,7 +44,7 @@
 <body>
 <div class="container">
     <div class="content">
-        <img class="image" src="/img/drunkkangaroo.png" class="title"><br>
+        <img class="image" src="{{asset('/img/drunkkangaroo.png')}}" class="title"><br>
         <p class="title"> That's a 404 mate.</p>
         <a class="title" href="{{ URL::previous() }}">Go back to where you came from.</a>
     </div>
