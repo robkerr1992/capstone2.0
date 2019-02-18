@@ -3,7 +3,7 @@
 use Faker\Generator as Faker;
 $image = '/img/bar.jpg';
 $barsArray = [
-    ['Cross-Eyed Seagull', '19141 Stone Oak Pkwy # 206, San Antonio, TX 78258', '2105453440', 'http://crosseyedseagull.clarksbars.com/', 'https://b.zmtcdn.com/data/reviews_photos/57a/07aae71082d890b9ac64ea10512e157a.jpg'],
+    ['Cross-Eyed Seagull', '19141 Stone Oak Pkwy # 206, San Antonio, TX 78258', '2105453440', 'http://crosseyedseagull.clarksbars.com/', 'cross-eyed-seagull.jpg'],
     ['Chicago Bar', '19141 Stone Oak Pkwy # 505, San Antonio, TX 78258', '2104945558', '', $image],
     ['Social House', '19160 Stone Oak Pkwy #104, San Antonio, TX 78258', '2103630677', '', $image],
     ['Nektar Lounge', '19239 Stone Oak Pkwy #110, San Antonio, TX 78258', '2108335370', 'nektarlounge.com', $image],
