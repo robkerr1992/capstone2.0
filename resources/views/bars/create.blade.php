@@ -27,18 +27,6 @@
 				<input type="text" class="form-control" name="email" id="email" placeholder="Bar email">
 				@include('forms.error', ['field' => 'email'])
 			</div>
-			{{--<select name="type" id="type">--}}
-				{{--<option value="">Bar type...</option>--}}
-				{{--<option value="pub">Pub</option>--}}
-				{{--<option value="dive">Dive</option>--}}
-				{{--<option value="club">Club</option>--}}
-				{{--<option value="sports">Sports</option>--}}
-				{{--<option value="karaoke">Karaoke</option>--}}
-				{{--<option value="rock">Rock</option>--}}
-				{{--<option value="jazz">Jazz</option>--}}
-				{{--<option value="taproom">Taproom</option>--}}
-				{{--<option value="cocktail">Cocktail</option>--}}
-			{{--</select>--}}
 			<div class="" >
 				<input type="hidden" name="features" class="filters features">
 				<label>
@@ -50,24 +38,15 @@
 				<label>
 					<input type="checkbox" class="filter-value" value="pet_friendly"> Pets Allowed
 				</label>
-				{{--<label>--}}
-					{{--<input type="checkbox" class="filter-value" value="bikes"> Bike Racks--}}
-				{{--</label>--}}
 				<label>
 					<input type="checkbox" class="filter-value" value="live_music"> Live Music
 				</label>
-				{{--<label>--}}
-					{{--<input type="checkbox" class="filter-value" value="reservations"> Reservations Needed--}}
-				{{--</label>--}}
 				<label>
 					<input type="checkbox" class="filter-value" value="tvs"> TVs
 				</label>
 				<label>
 					<input type="checkbox" class="filter-value" value="18+"> 18+
 				</label>
-				{{--<label>--}}
-					{{--<input type="checkbox" class="filter-value" value="kids"> Kids Allowed--}}
-				{{--</label>--}}
 				<label>
 					<input type="checkbox" class="filter-value" value="patio"> Outdoor Seating
 				</label>

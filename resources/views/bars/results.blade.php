@@ -7,7 +7,7 @@
 	@foreach ($bars as $index => $bar)
 	<div data-value="{{ $bar->id }}" class="row thisBar list-card">
 		<div class="col-xs-5 list-card-image">
-			<img class="pull-left" src="{{ $bar->pictures->first() ?$bar->pictures->first()->pic_url : '' }}" style="height: 22vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
+			<img class="pull-left" src="{{ $bar->pictures->first() ? asset($bar->pictures->first()->pic_url) : '' }}" style="height: 22vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
 		</div>
 		<div class="col-xs-7">
 			<h2>{{ $bar->name }}</h2>

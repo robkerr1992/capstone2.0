@@ -38,9 +38,9 @@
 					@foreach ($bar->pictures as $index => $picture)
 					<div class="item @if($index == 0) {{ 'active' }} @endif">
 
-					<div data-value="{{ $picture->pic_url }}" class="item @if($index == 0) {{ 'active' }} @endif">
-						<a href="{{ $picture->pic_url }}" rel="gallery"  class="pirobox_gall">
-							<img class="cover bar-show" src="{{ $picture->pic_url }}" alt="...">
+					<div data-value="{{ asset($picture->pic_url) }}" class="item @if($index == 0) {{ 'active' }} @endif">
+						<a href="{{ asset($picture->pic_url) }}" rel="gallery"  class="pirobox_gall">
+							<img class="cover bar-show" src="{{ asset($picture->pic_url) }}" alt="...">
 						</a>
 						<div class="carousel-caption">
 							<!-- maybe add captions to pictures table? -->
@@ -87,7 +87,7 @@
 									@foreach ($bar->reviews as $review)
 									<div class="row">
 										<div class="col-xs-3">
-											<img src="{{ $review->user->avatar }}" class="thumbnail responsive" height="60"
+											<img src="{{ asset($review->user->avatar) }}" class="thumbnail responsive" height="60"
 											width="60">
 											<h5>
 												<a href="{{ action('UserController@show', $review->user->id) }}">{{ $review->user->first_name }} {{ $review->user->formatLastName() }}.</a>
@@ -118,9 +118,6 @@
 									@endforeach
 								</div>
 								<div role="tabpanel" class="tab-pane fade" id="specials">
-									{{--@if(Auth::user())--}}
-									{{--<a href="/specials/create?bar_id={{ $bar->id }}">Add a special...</a>--}}
-									{{--@endif--}}
 									<br>
 									@foreach ($bar->specials as $special)
 									<div class="row">
@@ -143,14 +140,11 @@
 									@endforeach
 								</div>
 								<div role="tabpanel" class="tab-pane fade" id="events">
-									{{--@if(Auth::user())--}}
-									{{--<a href="/events/create?bar_id={{ $bar->id }}">Add an event...</a>--}}
-									{{--@endif--}}
 									@foreach ($bar->events as $event)
 									<br>
 									<div data-value="{{ $event->id }}" class="row list-card">
 										<div class="col-xs-5 list-card-image">
-											<img class="pull-left" src="{{$event->event_pic}}" style="height: 20vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
+											<img class="pull-left" src="{{asset($event->event_pic)}}" style="height: 20vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
 										</div>
 										<div class="col-xs-7">
 											<div class="event-info">
@@ -170,8 +164,8 @@
 				@section('scripts')
 				<script>
 					$('#myTabs a').click(function (e) {
-						e.preventDefault()
-						$(this).tab('show')
+						e.preventDefault();
+						$(this).tab('show');
 					});
 					$('#myTabs a:first').tab('show');
 					$('.carousel').carousel({
