@@ -36,7 +36,7 @@
 								<p>{{ $index+1 }}</p>
 							</div>
 							<img class="cover"
-							src="{{ $gpbar->bar->pictures->first() ? $gpbar->bar->pictures->first()->pic_url : '' }}"
+							src="{{ $gpbar->bar->pictures->first() ? asset($gpbar->bar->pictures->first()->pic_url) : '' }}"
 							alt="{{ $gpbar->bar->name }}">
 						</div>
 						@endforeach
