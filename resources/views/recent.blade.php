@@ -23,7 +23,7 @@
 									@foreach ($recent['bars'] as $bar)
 									<div data-value="{{ $bar->id }}" class="row list-card bar">
 										<div class="col-xs-5 list-card-image">
-											<img class="pull-left" src="{{ $bar->pictures->first()->pic_url or "" }}" style="height: 22vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
+											<img class="pull-left" src="{{ $bar->pictures->first() ? asset($bar->pictures->first()->pic_url) : "" }}" style="height: 22vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
 										</div>
 										<div class="col-xs-7">
 											<h2>{{ $bar->name}}</h2>
@@ -47,7 +47,7 @@
 										@foreach ($recent['events'] as $event)
 										<div data-value="{{ $event->id }}" class="row list-card event">
 											<div class="col-xs-5 list-card-image">
-												<img class="pull-left" src="{{$event->event_pic}}" style="height: 20vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
+												<img class="pull-left" src="{{asset($event->event_pic)}}" style="height: 20vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
 											</div>
 											<div class="col-xs-7">
 												<div class="event-info">
@@ -97,7 +97,7 @@
 																		<p>{{ $index+1 }}</p>
 																	</div>
 																	<img class="cover"
-																	src="{{ $gpbar->bar->pictures->first()->pic_url or '' }}"
+																	src="{{ $gpbar->bar->pictures->first() ? asset($gpbar->bar->pictures->first()->pic_url) : '' }}"
 																	alt="{{ $gpbar->bar->name }}">
 																</div>
 																@endforeach

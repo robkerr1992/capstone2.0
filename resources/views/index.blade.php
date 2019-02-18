@@ -20,7 +20,7 @@
 							<h2>{{ $event->title }}</h2>
 							<p>{{ $event->date->format('m/j/Y @ g:i A') }}</p>
 						</div>
-						<img class="cover" src="{{ $event->event_pic }}" alt="{{ $event->title }}">
+						<img class="cover" src="{{ asset($event->event_pic) }}" alt="{{ $event->title }}">
 					</div>
 					@endforeach
 				</div>
@@ -43,7 +43,7 @@
 	@foreach ($highestRated as $sortedBar)
 	<div data-value="{{ $sortedBar->id }}" class="row thisBar list-card">
 		<div class="col-xs-5 list-card-image">
-			<img class="pull-left" src="{{ $sortedBar->pictures->first() ? $sortedBar->pictures->first()->pic_url : '' }}" style="height: 22vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
+			<img class="pull-left" src="{{ $sortedBar->pictures->first() ? asset($sortedBar->pictures->first()->pic_url) : '' }}" style="height: 22vh;width: 100%;object-fit: cover;object-position: 50% 50%;">
 		</div>
 		<div class="col-xs-7 top-bars">
 			<h2>{{ $sortedBar->name}}</h2>

@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-3">
-			<img class="img img-thumbnail" src="{{ $user->avatar }}" height="150" width="150">
+			<img class="img img-thumbnail" src="{{ asset($user->avatar) }}" height="150" width="150">
 		</div>
 		<div class="col-xs-6">
 			<h2>{{ $user->first_name }} {{ $user->formatLastName() }}.</h2>
@@ -28,7 +28,7 @@
 			@foreach ($user->reviews as $review)
 			<div class="row">
 				<div class="col-xs-2">
-					<img src="{{ $review->bar->pictures->first() ? $review->bar->pictures->first()->pic_url : '' }}" class="thumbnail responsive" height="65" width="65">
+					<img src="{{ $review->bar->pictures->first() ? asset($review->bar->pictures->first()->pic_url) : '' }}" class="thumbnail responsive" height="65" width="65">
 				</div>
 				<div class="col-xs-10">
 					<a href="/bars/{{ $review->bar_id }}"><strong>{{ $review->bar->name }}</strong></a>
